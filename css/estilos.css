@@ -1,0 +1,339 @@
+/* ====================== CONFIGURACIÒN GENERAL DE LOS ASPECTOS WEB*/
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+body
+{
+   font-family: Arial, Helvetica, sans-serif;
+   background-color: #0f172a;
+   color: #f8fafc;
+   line-height: 1.6;
+}
+
+a
+{
+    text-decoration: none;
+    color: inherit;
+}
+
+/*============================= NAVEGACIÒN ============================*/
+
+.header
+{
+    padding: 24px 8%;
+    border-bottom: 1px solid #263247;
+}
+
+.navbar
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+
+.logo
+{
+    font-size: 24px;
+    font-weight: bold;
+    color: #38bdf8;   
+}
+
+.logo img
+{
+    width: 90px;
+    height: 96px;
+    text-align: center;
+    margin-bottom: 2px;
+}
+
+.nav-links
+{
+    display: flex;
+    gap: 28px;
+    list-style: none;
+}
+
+.nav-links a
+{
+    color: #cbd5e1;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover
+{
+    color: #38bdf8;
+}
+
+/* ============================ PORTADA PRINCIPAL ===================*/
+
+.hero
+{
+    min-height: 580px;
+    padding: 80px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.hero-content
+{
+    max-width: 600px;
+}
+
+.subtitle
+{
+    color: #38bdf8;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 24px;
+}
+
+.hero h1
+{
+    font-size: clamp(36px, 5vw, 60px);
+    line-height: 1.15;
+    margin-bottom: 24px;
+}
+
+.hero h1 span
+{
+    color: #38bdf8;
+}
+
+.description
+{
+    max-width: 480px;
+    color: #94a3b8;
+    margin-bottom: 32px;
+}
+
+.btn
+{
+    display: inline-block;
+    background-color: #38bdf8;
+    color: #0f172a;
+    padding: 13px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn:hover
+{
+    background-color: #7dd3fc;
+    transform: translate(-3px);
+}
+
+.hero-img
+{
+    width: 340px;
+    height: 400px;
+    flex-shrink: 0;
+    border-radius: 180px 180px 24px 24px;
+    overflow: hidden;
+    border: 3px solid #38bdf8;
+}
+
+.hero-img img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*====================== SOBRE MI =================================*/
+
+.about
+{
+    padding: 80px;
+    text-align: center;
+    background-color: #172237;
+}
+
+.about h2,
+.projects h2,
+.contact h2
+{
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.about p
+{
+    max-width: 700px;
+    margin: 0 auto;
+    color: #94a3b8;
+}
+
+/*====================== PROYECTOS (PROJECT) ========================*/
+
+.projects
+{
+    padding: 90px 8%;
+    text-align: center;
+}
+
+.section-description
+{
+    color: #94a3b8;
+    margin-bottom: 40px;
+}
+
+.project-grid
+{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    text-align: left;
+}
+
+.project-card
+{
+    padding: 30px;
+    background-color: #172237;
+    border: 1px solid #263247;
+    border-radius: 14px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.project-card:hover
+{
+    transform: translate(-6px);
+    border-bottom: #38bdf8;
+}
+
+.project-number
+{
+    color: #38bdf8;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.project-card h3
+{
+    margin-bottom: 12px;
+    font-size: 21px;
+}
+
+.project-card p
+{
+    color: #94a3b8;
+    margin-bottom: 22px;
+}
+
+.project-card span
+{
+    color: #38bdf8;
+    font-size: 13px;
+}
+
+/*============= CONTACTO ==================================*/
+
+.contact
+{
+    padding: 80px 8%;
+    text-align: center;
+    background-color: #172237;
+}
+
+.contact p
+{
+    color: #94a3b8;
+    margin-bottom: 28px;
+}
+
+/*============================ PIE DE PÀGINA ====================*/
+
+.footer
+{
+    padding: 24px 8%;
+    text-align: center;
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+/*=========================== DISEÑO ADAPTABLE ===================*/
+
+@media (max-width: 900px) 
+{
+    .hero
+    {
+        gap: 35px;
+    }
+
+    .hero-img
+    {
+        width: 200px;
+        height: 340px;
+    }
+
+    .project-grid
+    {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 650px) 
+{
+     .header
+     {
+        padding: 20px 6%;
+     }
+
+     .navbar
+     {
+        flex-direction: column;
+     }
+
+     .nav-links
+     {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 20px;
+     }
+
+     .hero
+     {
+        padding: 60px 6%;
+        flex-direction: column-reverse;
+        text-align: center;
+     }
+
+     .hero-img
+     {
+        width: 230px;
+        height: 280px;
+     }
+
+     .description
+     {
+       margin-left: auto; 
+       margin-right: auto;
+     }
+
+     .about,
+     .projects,
+     .contact
+     {
+        padding: 60px 6%;
+     }
+
+     .project-grid
+     {
+        grid-template-columns: 1fr;
+     }
+}
